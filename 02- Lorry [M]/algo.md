@@ -1,27 +1,54 @@
+# Lorry
 
-## Problem Link
-[Codeforces - 3B. Lorry](https://codeforces.com/contest/3/problem/B)
-
-## Problem Statement
-A rectangular lorry with a capacity of $V$ is to be loaded with waterborne vehicles. There are two types of vehicles:
-1. **Kayaks**: volume is 1, carrying capacity is $p_i$.
-2. **Catamarans**: volume is 2, carrying capacity is $p_i$.
-
-Find the maximum total carrying capacity that can be carried by the lorry and the indices of the vehicles to be loaded.
-
-## Logic
-The problem is a variation of the Knapsack problem. Since the volume $V$ can be up to $10^9$, a standard Dynamic Programming approach is not feasible. However, because there are only two types of items (volumes 1 and 2), we can use a **Greedy + Prefix Sums** approach:
-
-1. **Sort Greedily**: Separate the vehicles into two lists (Kayaks and Catamarans). Sort both lists in descending order of their carrying capacity. This ensures that if we pick $k$ vehicles of a certain type, they are the most valuable ones.
-2. **Prefix Sums**: Precalculate the cumulative capacity for both lists. This allows us to calculate the total capacity of $k$ items in $O(1)$ time.
-3. **Exhaustive Search**: 
-   - Iterate through the number of Kayaks ($k$) we could potentially take (from 0 to the total number of kayaks available, or up to volume $V$).
-   - For each $k$, calculate the remaining volume: $V_{rem} = V - k$.
-   - The number of Catamarans we can then fit is $c = \min(\text{total catamarans}, \lfloor V_{rem} / 2 \rfloor)$.
-   - The total capacity for this configuration is $\text{prefixSumKayaks}[k] + \text{prefixSumCatamarans}[c]$.
+**Problem Reference:** [Codeforces 3B - Lorry](https://codeforces.com/contest/3/problem/B)  
+**Algorithm:** Greedy Selection with Prefix Sums  
+**Complexity:** $O(N \log N)$ Time | $O(N)$ Space  
 
 
+## 1. Problem Definition
+A lorry with capacity $V$ must be loaded with waterborne vehicles of two types:
+1. **Kayaks:** volume 1, carrying capacity $p_i$.
+2. **Catamarans:** volume 2, carrying capacity $p_i$.
 
-4. **Complexity**: Sorting takes $O(N \log N)$, and the iteration takes $O(N)$.The overall complexity is $O(N \log N)$, which fits within the time limit.
+The goal is to maximize the total carrying capacity and output the chosen indices.
+
+
+## 2. The Algorithmic Challenge
+The classic knapsack DP is not feasible because $V$ can be as large as $10^9$.  
+However, only two volumes exist (1 and 2), so we can optimize with sorting and prefix sums.
+
+
+## 3. Greedy + Prefix Sums Strategy
+
+### Phase 1: Sort by Value
+Split the vehicles into two lists and sort each in descending order of $p_i$:
+* Kayaks (volume 1)
+* Catamarans (volume 2)
+
+This guarantees that the top $k$ items of each list are the best possible choices.
+
+### Phase 2: Prefix Sums
+Compute prefix sums for both lists:
+* `prefixKayaks[k]` = total capacity of the best $k$ kayaks.
+* `prefixCats[c]` = total capacity of the best $c$ catamarans.
+
+This lets us evaluate any selection in $O(1)$ time.
+
+### Phase 3: Exhaustive Search on Kayaks
+For each feasible number of kayaks $k$:
+1. Remaining volume is $V_{rem} = V - k$.
+2. Maximum catamarans is $c = \min(\text{total cats}, \lfloor V_{rem} / 2 \rfloor)$.
+3. Total capacity is `prefixKayaks[k] + prefixCats[c]`.
+
+Track the configuration with the highest total capacity and then output the indices of the chosen items.
+
+
+## 4. Complexity Analysis
+* **Time Complexity:** $O(N \log N)$ for sorting; the scan is $O(N)$.
+* **Space Complexity:** $O(N)$ for the lists and prefix sums.
+
+
+## 5. Conclusion
+By sorting each type and using prefix sums, we reduce the problem to a single linear scan over the number of kayaks. This guarantees the maximum total capacity within the volume constraint.
 
 *Written by: George Yanni*
