@@ -4,7 +4,7 @@
 [![Focus](https://img.shields.io/badge/focus-competitive%20programming-informational)](#)
 [![Difficulty](https://img.shields.io/badge/difficulty-E%7C%20M%7C%20H%7C%20H%2B%2B%7C%20L-lightgrey)](#)
 
-Personal archive of competitive programming problems that I find interesting, with a focus on clear reasoning and algorithm mastery. Each entry captures the source problem, a plain-English explanation of the solution, its difficulty level, and a final C++ implementation.
+Personal archive of competitive programming problems that I find interesting, with a focus on clear reasoning and algorithm mastery. Each entry captures the source problem, a plain-English explanation of the solution, its difficulty level, and a C++ implementation.
 
 **Author**: [George Yanni](https://www.linkedin.com/in/george-yanni-0x13/)
 
@@ -57,3 +57,4 @@ By collecting high-quality writeups and implementations over time, this archive 
 ## Closing
 
 This repository is a long-term project in algorithmic mastery—one problem at a time.
+
