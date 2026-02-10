@@ -8,7 +8,7 @@
 
 ## 1. Problem Definition
 On a standard $8 \times 8$ chessboard, a King is placed at a starting square $s$ and needs to reach a target square $t$ in the minimum number of moves. 
-
+ 
 ### King's Movement Rules:
 A King can move exactly one square in any direction:
 * **Horizontal:** Left (`L`), Right (`R`)
