@@ -28,14 +28,14 @@ If the position is legal and no one wins:
 - If the board is full, it is a `draw`.
 - Otherwise, if `X == O` then `first`, else `second`.
 
-## 3. Approach 1: Direct Scan (`code_1.cpp`)
+## 3. Approach 1: Direct Scan (`3C_1.cpp`)
 1. Read the 3 lines, count `X` and `0`.
 2. Scan all 3 rows, all 3 columns, and the 2 diagonals.
 3. Apply the legality rules and print the correct outcome.
 
 This is the straightforward method and mirrors the board exactly.
 
-## 4. Approach 2: Bitmask (`code_2.cpp`)
+## 4. Approach 2: Bitmask (`3C_2.cpp`)
 1. Map the 3x3 board into 9 bits (row-major order).
 2. Build two masks: `x_mask` and `o_mask`.
 3. Precompute the 8 winning bitmasks (3 rows, 3 cols, 2 diagonals).
@@ -46,8 +46,8 @@ This method is compact and useful in problems where many boards are processed.
 
 ## 5. Conclusion
 Both solutions implement the same rules, but differ in representation:
-- `code_1.cpp` uses direct grid checks for clarity.
-- `code_2.cpp` uses bit operations for conciseness.
+- `3C_1.cpp` uses direct grid checks for clarity.
+- `3C_2.cpp` uses bit operations for conciseness.
 
 *Written by: George Yanni*
 

@@ -19,12 +19,12 @@ This guarantees the smallest available suffix because the count tracks the next 
 
 ## 3. Two Implementations
 This folder contains two solutions of the same problem:
-- `code_1.cpp`: a naive vector + linear search approach (clear but too slow for large inputs).
-- `code_2.cpp`: a map-based approach that is efficient and accepted.
+- `4C_1.cpp`: a naive vector + linear search approach (clear but too slow for large inputs).
+- `4C_2.cpp`: a map-based approach that is efficient and accepted.
 
 ## 4. Complexity Analysis
-- **Naive (code_1.cpp):** $O(n^2)$ worst-case time due to repeated linear searches.
-- **Map (code_2.cpp):** $O(n \log n)$ time using an ordered map.  
+- **Naive (4C_1.cpp):** $O(n^2)$ worst-case time due to repeated linear searches.
+- **Map (4C_2.cpp):** $O(n \log n)$ time using an ordered map.  
   (Can be $O(n)$ average with `unordered_map`.)
 
 ## 5. Conclusion
