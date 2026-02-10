@@ -1,6 +1,6 @@
 # Longest Regular Bracket Sequence
 
-**Problem Reference:** [Codeforces 5A - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C)  
+**Problem Reference:** [Codeforces 5C - Longest Regular Bracket Sequence](https://codeforces.com/contest/5/problem/C)  
 **Algorithm:** Stack + Dynamic Programming  
 **Complexity:** $O(n)$ Time | $O(n)$ Space  
 
