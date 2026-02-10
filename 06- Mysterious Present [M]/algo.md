@@ -3,7 +3,7 @@
 **Problem Reference:** [Codeforces 4D - Mysterious Present](https://codeforces.com/contest/4/problem/D)  
 **Algorithm:** Sort + Dynamic Programming (LIS with parent reconstruction)  
 **Complexity:** $O(n^2)$ Time | $O(n)$ Space  
-
+ 
 ## 1. Problem Definition
 Given a card of size $(w, h)$ and $n$ envelopes $(w_i, h_i)$, find the longest chain where each envelope strictly fits into the next one:
 - $w_i < w_j$ and $h_i < h_j$

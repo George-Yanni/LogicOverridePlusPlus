@@ -3,7 +3,7 @@
 **Problem Reference:** [Codeforces 3B - Lorry](https://codeforces.com/contest/3/problem/B)  
 **Algorithm:** Greedy Selection with Prefix Sums  
 **Complexity:** $O(N \log N)$ Time | $O(N)$ Space  
-
+ 
 
 ## 1. Problem Definition
 A lorry with capacity $V$ must be loaded with waterborne vehicles of two types:

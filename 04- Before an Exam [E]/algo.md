@@ -3,7 +3,7 @@
 **Problem Reference:** [Codeforces 4B - Before an Exam](https://codeforces.com/contest/4/problem/B)  
 **Algorithm:** Feasibility Check + Greedy Distribution  
 **Complexity:** $O(d)$ Time | $O(d)$ Space  
-
+ 
 ## 1. Problem Definition
 We have $d$ days. Each day $i$ requires study time within a range $[l_i, r_i]$.  
 Given a target total time $S$, decide if it is possible to choose daily study times that sum to $S$, and output any valid schedule.

@@ -3,7 +3,7 @@
 **Problem Reference:** [Codeforces 4C - Registration System](https://codeforces.com/contest/4/problem/C)  
 **Algorithm:** Hash Map Counting (plus naive baseline)  
 **Complexity:** $O(n \log n)$ Time | $O(n)$ Space  
-
+ 
 ## 1. Problem Definition
 We receive $n$ username requests.  
 For each name:

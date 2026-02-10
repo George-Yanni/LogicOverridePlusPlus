@@ -4,7 +4,7 @@
 **Approach 1:** Direct board scan (rows, columns, diagonals)  
 **Approach 2:** Bitmask board representation  
 **Complexity:** $O(1)$ Time | $O(1)$ Space
-
+ 
 ## 1. Problem Summary
 Given a 3x3 Tic-Tac-Toe board state, determine whether it is a legal position and identify the correct outcome:
 - `illegal`
