@@ -21,7 +21,7 @@ Personal archive of competitive programming problems that I find interesting, wi
 
 `LogicOverride++` is a curated collection of problems that train algorithmic thinking. The goal is not just to solve, but to understand: why a solution works, how to derive it, and how to implement it cleanly in C++.
 
-## Difficulty Levels
+## Difficulty Levels [Subjective Rating]
 
 Each problem is tagged with a difficulty based on my personal estimation:
 
@@ -57,4 +57,5 @@ By collecting high-quality writeups and implementations over time, this archive 
 ## Closing
 
 This repository is a long-term project in algorithmic mastery—one problem at a time.
+
 
